@@ -12,10 +12,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile"
+        android:text="Your Profile"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView" />
+        android:id="@+id/profileHeaderTextView"
+        android:textStyle="bold" />
 
     <ImageButton
         android:layout_width="@android:dimen/thumbnail_width"
@@ -23,7 +24,119 @@
         android:id="@+id/imageButton"
         android:src="@drawable/profilepic"
         android:scaleType="centerCrop"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_below="@+id/textView" />
+        android:layout_below="@+id/profileHeaderTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name: Meemaw"
+        android:ems="10"
+        android:id="@+id/nameViewText"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/profileHeaderTextView"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ageViewText"
+        android:text="Age: 69"
+        android:layout_below="@+id/nameViewText"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cityViewText"
+        android:text="City: Los Angeles"
+        android:layout_below="@+id/ageViewText"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statusViewText"
+        android:text="Status: Online Now!"
+        android:layout_below="@+id/cityViewText"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton" />
+
+    <GridLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:layout_alignRight="@+id/imageButton4"
+        android:layout_alignEnd="@+id/imageButton4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageButton">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Top 4"
+            android:id="@+id/topTextView"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/statusViewText"
+            android:layout_toEndOf="@+id/statusViewText"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:id="@+id/imageButton2"
+            android:src="@drawable/jennifer"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/topTextView"
+            android:layout_alignLeft="@+id/statusViewText"
+            android:layout_alignStart="@+id/statusViewText"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:id="@+id/imageButton4"
+            android:src="@drawable/sarah"
+            android:scaleType="centerCrop"
+            android:layout_alignTop="@+id/imageButton5"
+            android:layout_toRightOf="@+id/cityViewText"
+            android:layout_toEndOf="@+id/cityViewText"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <ImageButton
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:id="@+id/imageButton5"
+            android:src="@drawable/brock"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/topTextView"
+            android:layout_toRightOf="@+id/topTextView"
+            android:layout_toEndOf="@+id/topTextView"
+            android:layout_row="1"
+            android:layout_column="2" />
+
+        <ImageButton
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:id="@+id/imageButton3"
+            android:src="@drawable/bigcat"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/topTextView"
+            android:layout_toLeftOf="@+id/topTextView"
+            android:layout_toStartOf="@+id/topTextView"
+            android:layout_row="1"
+            android:layout_column="3" />
+    </GridLayout>
 </RelativeLayout>
